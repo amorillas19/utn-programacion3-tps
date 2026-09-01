@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registro</title>
+</head>
+
+<body>
+    <form id="registro">
+        <legend>Nombre completo</legend>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required
+            title="Solo letras, mínimo 3 caracteres"><br><br>
+        
+        <legend>Correo electrónico</legend>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" placeholder="Ej: juan@mail.com" required><br><br>
+
+        <legend>Contraseña</legend>
+        <label for="contrasena">Contraseña:</label><br>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Ej: ********" required><br><br>
+        
+        <legend>Seleccion de género</legend>
+        <label for="masculino">
+            <input type="radio" name="genero" id="masculino" value="masculino">
+            <span>Masculino</span>
+        </label>
+        <label for="femenino">
+            <input type="radio" name="genero" id="femenino" value="femenino">
+            <span>Femenino</span>
+        </label>
+        <label for="otro">
+            <input type="radio" name="genero" id="otro" value="otro">
+            <span>Otro</span>
+        </label>
+
+        <legend>Intereses</legend>
+        <label for="deportes">
+            <input type="checkbox" id="deportes" name="intereses" value="deportes">
+            <span>Deportes</span>
+        </label>
+        <label for="música">
+            <input type="checkbox" id="música" name="intereses" value="música">
+            <span>Música</span>
+        </label>
+        <label for="lectura">
+            <input type="checkbox" id="lectura" name="intereses" value="lectura">
+            <span>Lectura</span>
+        </label>
+
+        <legend>Comentarios Adicionales</legend>
+        <textarea id="comentarios" name="comentarios" placeholder="Escriba sus comentarios aquí..." rows="4" cols="30"></textarea><br><br>
+
+        <legend>País</legend>
+        <label for="pais">Seleccione:</label><br>
+        <select id="pais" name="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <option value="chile">Chile</option>
+        </select><br><br>
+
+        <legend>Boton de envio</legend>
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>
