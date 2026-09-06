@@ -1,0 +1,15 @@
+p {
+    color: #333;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+#p-id {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.p-clase {
+    color: #28a745;
+    font-style: italic;
+}
