@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi tienda</title>
+	<link rel="stylesheet" href="mitienda.css">
+</head>
+<body>
+    <header>
+        <a href="#top" class="site-header__logo" aria-label="Inicio">
+            <span class="site-header__mark" aria-hidden="true">M</span>
+            <span>MiTienda</span>
+        </a>
+
+        <nav>
+            <ul class="site-header__nav">
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <button class="site-header__menu-btn" id="menu-toggle" aria-label="Abrir menú">
+            <!-- Icono hamburguesa en SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <nav class="site-header__nav--mobile" id="mobile-menu">
+            <a href="#novedades">Novedades</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Fila superior: Sistema de Botones y Tarjeta de Producto lado a lado -->
+        <div class="container main-grid">
+            
+            <!-- Bloque 3: Sistema de Botones (dentro de un panel) -->
+            <section class="panel">
+                <h2 class="section__title">1) Sistema de Botones</h2>
+                <div class="btn-group">
+                    <button class="btn btn--primary">Primario</button>
+                    <button class="btn btn--secondary">Secundario</button>
+                    <button class="btn btn--outline">Outline</button>
+                    <button class="btn btn--danger">Peligro</button>
+                    <button class="btn btn--primary btn--icon">
+                        <img src="mitienda_lupa.png" alt="search">
+                        Con icono
+                    </button>
+                    <button class="btn btn--secondary" disabled>Deshabilitado</button>
+                </div>
+            </section>
+
+            <!-- Bloque 4: Tarjeta de Producto -->
+            <section class="panel product-section">
+                <h2 class="section__title">2) Tarjeta de Producto</h2>
+            
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <span class="product-card__badge">Nuevo</span>
+                        <img src="zapatillas.webp" alt="Zapatillas Runner Pro">
+                    </div>
+            
+                    <div class="product-card__info">
+                        <h3 class="product-card__name">Zapatillas Runner Pro</h3>
+                        <p class="product-card__description">Amortiguación ligera, malla respirable y suela antideslizante.
+                            Perfectas para entrenar todos los días.</p>
+            
+                        <div class="product-card__pricing">
+                            <span class="product-card__price">$ 24.999</span>
+                            <span class="product-card__old-price">$ 29.999</span>
+                        </div>
+            
+                        <div class="product-card__actions">
+                            <button class="btn btn--primary">Comprar ahora</button>
+                            <button class="btn btn--outline btn--icon">
+                                <img src="mitienda_anadir.png" alt="Añadir">
+                                Añadir
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+
+        <!-- Bloque 6: Secciones de Relleno -->
+        <section id="novedades" class="section">
+            <div class="container panel">
+                <h2>Novedades</h2>
+                <p class="code-note">Sección de relleno para probar el menú.</p>
+            </div>
+        </section>
+
+        <section id="ofertas" class="section">
+            <div class="container panel">
+                <h2>Ofertas</h2>
+                <p class="code-note">Otra sección de relleno.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container panel">
+                <h2>Contacto</h2>
+                <p class="code-note">Más contenido de ejemplo.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

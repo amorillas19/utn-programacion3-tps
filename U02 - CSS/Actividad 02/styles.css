@@ -13,3 +13,120 @@ p {
     color: #28a745;
     font-style: italic;
 }
+
+.sombras_mayusculas {
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px #333;
+}
+
+.tercero_b{
+    line-height: 2.5;           
+    letter-spacing: 0.45em;     
+}
+
+.tercero_c{
+    font-style: italic;  
+    font-family: 'Georgia', 'Garamond', serif;
+    line-height: 2.5;
+}
+
+.tarjeta{
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin: 30px;
+    background-color: #28a745;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(179, 3, 3, 0.664);
+}
+
+.tarjeta_uno, .tarjeta_dos, .tarjeta_tres {
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin: 30px;
+    background-color: #28a745;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(179, 3, 3, 0.3);
+    
+    display: block;
+    width: 300px;
+}
+
+.tarjeta_cuatro, .tarjeta_cinco, .tarjeta_seis {
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin: 30px;
+    background-color: #28a745;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(179, 3, 3, 0.3);
+    
+    display: inline;
+    width: 300px;
+    vertical-align: auto;
+}
+
+.tarjeta_siete, .tarjeta_ocho, .tarjeta_nueve {
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin: 30px;
+    background-color: #28a745;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(179, 3, 3, 0.3);
+    
+    display: inline-block;
+    width: 300px;
+    vertical-align: top; /* Alinea al tope, no al baseline */
+}
+
+/* BOTONES DISPLAY Y VISIBILITY */
+.boton_display_none {
+    display: none; /* Desaparece completamente, no toma espacio */
+}
+ 
+.boton_visibility_hidden {
+    visibility: hidden; /* Desaparece visualmente pero sigue tomando espacio */
+}
+ 
+/* Estilos generales para los botones */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #0056b3;
+}
+
+/* TEMA CLARO (por defecto) */
+:root {
+    --color-fondo: #ffffff;
+    --color-texto: #333333;
+    --color-acento: #007bff;
+}
+
+/* TEMA OSCURO (cuando apliques esta clase) */
+body.tema-oscuro {
+    --color-fondo: #1a1a1a;
+    --color-texto: #ffffff;
+    --color-acento: #00d4ff;
+}
+
+/* Tarjeta de perfil */
+.tarjeta-perfil {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: 2px solid var(--color-acento);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-perfil h3 {
+    color: var(--color-acento);
+}

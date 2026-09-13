@@ -12,20 +12,119 @@
 	</header>
 
 	<main>
+		<h2>1. Introducción a CSS</h2>
 		<p> CSS sirve para crear un conjunto de reglas visuales para darle
 			formato, estilo y personalidad a un documento HTML. Es una herramienta
 			para mejorar la apariencia de una pagina web.
 		</p>
 
 		<section>
+			<h2>2. Selectores en CSS</h2>
 			<p id="p-id"> Parrafo 1 - con id</p>
 			<p class="p-clase"> Parrafo 2 - con clase</p>
 			<p> Parrafo 3 - raso con tag, es decir etiqueta p</p>
 		</section>
 
 		<section>
-			<h2>Titulo para sombras y mayusculas</h2>
-			<p class="tercer_punto">Este es el tercer punto de la actividad.</p>
+			<h2>3. Modificación de Texto</h2>
+			<h2 class="sombras_mayusculas">Este es el punto 3-A (sombras y mayusculas)</h2>
+			<p class="tercero_b">Este es el 3-B de la actividad.</p>
+			<blockquote class="tercero_c">"La vida es lo que sucede mientras estás ocupado haciendo otros planes."
+				<footer>— John Lennon</footer>
+			</blockquote>
+		</section>
+
+		<section>
+			<h2>4. Modelo de Caja</h2>
+			<div class="tarjeta">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+				<p> El content-box toma el width solo del contenido, mientras que borderbox se recomienda porque toma border y
+					padding facilitando la visualizacion</p>
+			</div>
+		</section>
+
+		<h2>5. Display y Visibility</h2>
+		<section>
+			<h2>Display Block</h2>
+			<div class="tarjeta_uno">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_dos">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_tres">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Display inline</h2>
+			<div class="tarjeta_cuatro">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_cinco">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_seis">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Display Inline-Block</h2>
+			<div class="tarjeta_siete">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_ocho">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+			<div class="tarjeta_nueve">
+				<h3>Titulo tarjeta</h3>
+				<p>Este es el parrafo de la tarjeta</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Botones</h2>
+			<p>display: none - El elemento desaparece COMPLETAMENTE como si no existiera.</p>
+			<p>visibility: hidden - El elemento desaparece VISUALMENTE pero sigue ocupando espacio.
+				en el navegador.</p>
+		
+			<button class="boton_display_none">Botón con display: none</button>
+			<button class="boton_visibility_hidden">Botón con visibility: hidden</button>
+			<button>Botón normal (referencia)</button>
+		
+			<p style="margin-top: 20px; padding: 10px; background-color: #f0f0f0;">
+				Fijate en el espacio: El botón con display: none desaparece y no deja espacio vacío.
+				El botón con visibility: hidden desaparece pero el espacio sigue ahí (ves un espacio en
+				blanco).</p>
+		</section>
+
+		<section>
+			<h2>6. Variables CSS - Tema de Colores</h2>
+		
+			<button onclick="cambiarTema()">Cambiar a Tema Oscuro</button>
+		
+			<div class="tarjeta-perfil">
+				<h3>Perfil de Usuario</h3>
+				<p>Esta tarjeta usa variables CSS para sus colores.</p>
+				<p>El fondo, texto y borde cambian según el tema.</p>
+			</div>
+		
+			<script>
+				function cambiarTema() {
+					document.body.classList.toggle('tema-oscuro');
+				}
+			</script>
 		</section>
 	</main>
 
