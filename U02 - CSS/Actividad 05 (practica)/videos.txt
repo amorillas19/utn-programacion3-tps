@@ -1,0 +1,14 @@
+01 - proyecto integrador
+https://www.youtube.com/watch?v=PQ7zy7xrEAM
+
+02 - header
+https://www.youtube.com/watch?v=mmHqBiGxDB4
+
+03 - banner
+https://www.youtube.com/watch?v=QgwQYrTJ50Q.
+
+04 - caracteristicas
+https://www.youtube.com/watch?v=L9hEQLtVkvs
+
+05 - footer y mediaqueries
+https://www.youtube.com/watch?v=qMnPkE9DmzM
