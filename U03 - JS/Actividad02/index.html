@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP JavaScript - Funciones, Objetos, DOM y Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Trabajo Práctico JavaScript</h1>
+      <p>Funciones, Objetos, DOM y Eventos</p>
+    </header>
+
+    <!-- PUNTO 1: FUNCIONES DECLARATIVAS Y EXPRESADAS -->
+    <section class="seccion">
+      <h2>Punto 1: Funciones Declarativas y Expresadas</h2>
+      <div class="resultado">
+        <p>Cuadrado de 5: <span id="resultado1">25</span></p>
+        <p>Cubo de 5: <span id="resultado2">125</span></p>
+      </div>
+    </section>
+
+    <!-- PUNTO 2: ARROW FUNCTIONS Y PARÁMETROS POR DEFECTO -->
+    <section class="seccion">
+      <h2>Punto 2: Arrow Functions y Parámetros por Defecto</h2>
+      <div class="resultado">
+        <p id="saludo1">Hola Ana, tienes 18 años</p>
+        <p id="saludo2">Hola Carlos, tienes 25 años</p>
+      </div>
+    </section>
+
+    <!-- PUNTO 3: OBJETOS CON PROPIEDADES Y MÉTODOS -->
+    <section class="seccion">
+      <h2>Punto 3: Objetos con Propiedades y Métodos</h2>
+      <div class="resultado">
+        <p id="presentacion">Hola, soy Ana y tengo 25 años</p>
+        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+          Propiedades: nombre, edad | Método: presentarse()
+        </p>
+      </div>
+    </section>
+
+    <!-- PUNTO 4: DESESTRUCTURACIÓN -->
+    <section class="seccion">
+      <h2>Punto 4: Desestructuración</h2>
+      <div class="resultado">
+        <p>Nombre (desestructurado): <span id="des-nombre">Ana</span></p>
+        <p>Edad (desestructurada): <span id="des-edad">25</span></p>
+        <p>Ciudad (desestructurada): <span id="des-ciudad">Mendoza</span></p>
+      </div>
+    </section>
+
+    <!-- PUNTO 5: SPREAD Y REST -->
+    <section class="seccion">
+      <h2>Punto 5: Operador Spread/Rest</h2>
+      <div class="resultado">
+        <p>Array original: <span id="array-original">[1, 2, 3]</span></p>
+        <p>Array con spread: <span id="array-spread">[1, 2, 3, 4, 5, 6]</span></p>
+        <p>Suma (2, 3, 5): <span id="suma1">10</span></p>
+        <p>Suma (10, 20, 30, 40): <span id="suma2">100</span></p>
+      </div>
+    </section>
+
+    <!-- PUNTO 6 Y 7: MANIPULACIÓN DEL DOM Y EVENTOS CLICK -->
+    <section class="seccion">
+      <h2 id="titulo">Punto 6 y 7: DOM y Eventos Click</h2>
+      <div class="input-group">
+        <input type="text" id="inputTexto" placeholder="Ingresa un elemento...">
+        <button id="botonAgregar">Agregar</button>
+      </div>
+      <ul id="lista">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+      </ul>
+    </section>
+
+    <!-- PUNTO 8: EVENTO SUBMIT -->
+    <section class="seccion">
+      <h2>Punto 8: Evento Submit y preventDefault</h2>
+      <form id="formulario">
+        <input type="text" id="inputFormulario" placeholder="Escribe algo...">
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="mensaje" class="mensaje"></div>
+    </section>
+
+    <!-- PUNTO 9: KEYDOWN Y CHANGE -->
+    <section class="seccion">
+        <h2>Punto 9: Eventos Keydown y Change</h2>
+    
+        <div>
+            <label for="inputKeydown">Presiona Enter para agregar:</label>
+            <input type="text" id="inputKeydown" placeholder="Escribe y presiona Enter...">
+        </div>
+        <ul id="listaKeydown"></ul>
+    
+        <div style="margin-top: 20px;">
+            <label for="selectOpciones">Selecciona una opción:</label>
+            <select id="selectOpciones">
+                <option value="">-- Elige una opción --</option>
+                <option value="Opción 1">Opción 1</option>
+                <option value="Opción 2">Opción 2</option>
+                <option value="Opción 3">Opción 3</option>
+            </select>
+        </div>
+    
+        <p id="parrafoSeleccion" class="info"></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
