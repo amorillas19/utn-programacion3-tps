@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    
+    <persistence-unit name="FacturacionPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <class>com.orm.EntityId</class>
+        <class>com.orm.AuditoriaApp</class>
+        <class>com.orm.Usuario</class>
+        <class>com.orm.Rubro</class>
+        <class>com.orm.Marca</class>
+        <class>com.orm.TipoMoneda</class>
+        <class>com.orm.CondicionIva</class>
+        <class>com.orm.Contacto</class>
+        <class>com.orm.Domicilio</class>
+        <class>com.orm.Cliente</class>
+        <class>com.orm.PuntoVenta</class>
+        <class>com.orm.Articulo</class>
+        <class>com.orm.ListaPrecio</class>
+        <class>com.orm.ListaPrecioArticulo</class>
+        <class>com.orm.FacturaVenta</class>
+        <class>com.orm.FacturaVentaDetalle</class>
+        
+        <properties>
+            <!-- MySQL Configuration -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/facturacion?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="root"/>
+            
+            <!-- PostgreSQL Configuration (comentado)
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/facturacion"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            -->
+            
+            <!-- Hibernate Properties -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
