@@ -1,0 +1,144 @@
+Diagrama o descripción del modelo:
+
+MODELO ORM - com.orm Package
+=============================
+
+SUPERCLASES:
+- EntityId (abstracta)
+  * id: Long (PK, @GeneratedValue)
+
+- AuditoriaApp extends EntityId (abstracta)
+  * fechaAlta: LocalDateTime (nullable=false)
+  * fechaBaja: LocalDateTime (nullable=false)
+  * fechaModificacion: LocalDateTime (nullable=false)
+  * usuarioCarga: Usuario (ManyToOne, nullable=false)
+  * usuarioBaja: Usuario (ManyToOne, nullable=true)
+  * usuarioModificacion: Usuario (ManyToOne, nullable=false)
+
+ENTIDADES:
+- Usuario extends EntityId
+  * usuario: String (nullable=false)
+  * clave: String (nullable=false)
+  * nombre: String (nullable=false)
+  * apellido: String (nullable=false)
+
+- Rubro extends AuditoriaApp
+  * codigo: Integer (nullable=false)
+  * denominacion: String (nullable=false)
+
+- Marca extends AuditoriaApp
+  * codigo: Integer (nullable=false)
+  * denominacion: String (nullable=false)
+
+- TipoMoneda extends AuditoriaApp
+  * codigoAfip: String (nullable=false)
+  * denominacion: String (nullable=false)
+  * simbolo: String (nullable=false)
+
+- CondicionIva extends AuditoriaApp
+  * codigoAfip: int (nullable=false)
+  * denominacion: String (nullable=false)
+
+- Contacto extends EntityId
+  * email: String
+  * telefono: String
+  * celular: String
+
+- Domicilio extends EntityId
+  * nombreCalle: String
+  * numeroCalle: String
+
+- Cliente extends AuditoriaApp
+  * cuitCuil: String (nullable=false)
+  * denominacion: String (nullable=false)
+  * contacto: Contacto (OneToOne, nullable=false)
+  * domicilio: Domicilio (OneToOne, nullable=false)
+
+- PuntoVenta extends AuditoriaApp
+  * numero: int (nullable=false)
+  * descripcion: String
+  * tipoEmision: String
+  * domicilioComercial: String
+
+- Articulo extends AuditoriaApp
+  * codigo: String (nullable=false)
+  * denominacion: String (nullable=false)
+  * rubro: Rubro (ManyToOne)
+  * marca: Marca (ManyToOne)
+
+- ListaPrecio extends AuditoriaApp
+  * codigo: String (nullable=false)
+  * denominacion: String (nullable=false)
+
+- ListaPrecioArticulo extends AuditoriaApp
+  * listaPrecio: ListaPrecio (ManyToOne, nullable=false)
+  * articulo: Articulo (ManyToOne, nullable=false)
+  * precioVenta: double (nullable=false)
+
+- FacturaVenta extends AuditoriaApp
+  * numero: Long
+  * fechaEmision: LocalDateTime (nullable=false)
+  * cliente: Cliente (ManyToOne, nullable=true)
+  * condicionIva: CondicionIva (ManyToOne, nullable=false)
+  * tipoMoneda: TipoMoneda (ManyToOne, nullable=false)
+  * puntoVenta: PuntoVenta (ManyToOne, nullable=false)
+  * estado: String (nullable=false)
+  * importeTotal: double (nullable=false)
+  * importeCobrado: double
+  * importeSaldo: double
+  * fechaAnulacion: LocalDateTime
+  * cae: String
+  * caeFechaVencimiento: LocalDateTime
+  * resultadoAfip: String
+  * motivoRechazo: String
+  * observaciones: String
+  * detalles: List<FacturaVentaDetalle> (OneToMany, cascade=ALL, mappedBy="factura")
+
+- FacturaVentaDetalle extends EntityId
+  * factura: FacturaVenta (ManyToOne, nullable=false)
+  * listaPrecioArticulo: ListaPrecioArticulo (ManyToOne, nullable=false)
+  * cantidad: double (nullable=false)
+  * precioUnitario: double (nullable=false)
+  * descripcion: String
+  * porcentajeBonificacion: double
+  * importeNeto: double
+  * importeIva: double
+  * importeSubtotal: double (nullable=false)
+
+RELACIONES CLAVE:
+- FacturaVenta 1:N FacturaVentaDetalle (cascade=ALL)
+- Articulo N:1 Rubro
+- Articulo N:1 Marca
+- ListaPrecioArticulo N:1 ListaPrecio
+- ListaPrecioArticulo N:1 Articulo
+- Cliente 1:1 Contacto
+- Cliente 1:1 Domicilio
+- AuditoriaApp N:1 Usuario (3 relaciones: carga, baja, modificacion)
+
+Estructura 
+BASE DE DATOS: PostgreSQL 
+PACKAGE: com.orm
+PERSISTENCE_UNIT: FacturacionPU
+
+Archivos necesarios:
+persistence.xml: Para ver configuración de JPA y conexión.
+pom.xml: Para saber dependencias (Hibernate, driver BD, versión Java).
+
+Ubicación de archivos:
+Código fuente: src/main/java/com/orm/
+persistence.xml: src/main/resources/META-INF/persistence.xml
+pom.xml: raíz del proyecto
+
+Cómo ejecutar:
+Compilar: mvn clean compile
+Ejecutar: mvn exec:java -Dexec.mainClass="com.orm.Main"
+
+Nota sobre Base de Datos:
+BD creada en PostgreSQL con nombre "facturacion"
+Usuario: postgres
+Password: 1234
+
+Qué ya se hizo: 
+Completaste el TP del ORM con cascada funcionando.
+
+
