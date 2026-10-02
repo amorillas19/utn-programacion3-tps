@@ -12,6 +12,9 @@ com\orm\Articulo.class
 com\orm\FacturaVentaDetalle.class
 com\orm\Usuario.class
 com\orm\Rubro.class
+com\orm\Seeder.class
 com\orm\PuntoVenta.class
+com\orm\ConsultasJPQL.class
 com\orm\FacturaVenta.class
 com\orm\ListaPrecio.class
+com\orm\Seeder$Linea.class

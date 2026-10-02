@@ -33,7 +33,7 @@
             <property name="javax.persistence.jdbc.password" value="root"/>
             -->
             
-            <!-- PostgreSQL Configuration (comentado) -->
+            <!-- PostgreSQL Configuration -->
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/facturacion"/>
             <property name="javax.persistence.jdbc.user" value="postgres"/>
@@ -41,9 +41,9 @@
             
             
             <!-- Hibernate Properties -->
-            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
         </properties>
     </persistence-unit>
 </persistence>

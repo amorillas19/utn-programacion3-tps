@@ -8,7 +8,7 @@ public abstract class AuditoriaApp extends EntityId {
     @Column(nullable = false)
     private LocalDateTime fechaAlta;
 
-    @Column(nullable = false)
+    @Column
     private LocalDateTime fechaBaja;
 
     @Column(nullable = false)
